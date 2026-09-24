@@ -68,17 +68,24 @@ focus-visible{outline:3px solid var(--lagunita);outline-offset:2px}
 
 /* Main nav */
 .mainnav{position:sticky;top:0;z-index:20;background:var(--bg);border-top:1px solid var(--rule);box-shadow:none;border-bottom:1px solid var(--rule)}
-.mainnav .container{display:flex;align-items:stretch;gap:0;overflow-x:auto;scrollbar-width:none}
-.mainnav .container::-webkit-scrollbar{display:none}
+.mainnav .container{display:flex;align-items:stretch;gap:1rem}
+.mainnav .links{display:flex;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.mainnav .links::-webkit-scrollbar{display:none}
 .mainnav a{display:block;padding:1rem 1.1rem;color:var(--ink);text-decoration:none;font-weight:600;font-size:1.05rem;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-1px}
 .mainnav a:first-child{padding-left:0}
 .mainnav a:hover{color:var(--link)}
 .mainnav a.active{border-bottom-color:var(--cardinal);color:var(--ink)}
-.mainnav .cta{margin-left:auto;align-self:center;padding:.4rem 1rem;border:1.5px solid var(--cardinal);color:var(--cardinal);border-radius:3px}
+.mainnav .cta{flex:none;margin-left:auto;align-self:center;padding:.4rem 1rem;border:1.5px solid var(--cardinal);color:var(--cardinal);border-radius:3px}
 .mainnav .cta:hover{background:var(--tint);color:var(--cardinal)}
 .mainnav .cta.active{color:var(--cardinal)}
 .progress{position:absolute;left:0;top:-1px;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--cardinal)}
-@media (max-width:640px){.mainnav .opt{display:none}.mainnav a[href="#program"]{padding-left:0}}
+@media (max-width:640px){
+  .mainnav .container{padding-right:1rem}
+  .mainnav .links{mask-image:linear-gradient(90deg,#000 85%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:1.5rem}
+  .mainnav .links a{padding:.9rem .75rem;font-size:1rem}
+  .mainnav .links a:first-child{padding-left:0}
+  .mainnav .cta{padding:.35rem .8rem;font-size:.95rem}
+}
 
 /* Hero */
 .hero{background:var(--bg-alt);border-bottom:1px solid var(--rule)}
@@ -149,9 +156,17 @@ h3{font-weight:700;font-size:1.3rem;line-height:1.25;margin:0 0 .3rem}
 .eras{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:.7rem;font-size:.9rem;font-weight:600}
 .eras span{border-top:3px solid var(--c);padding-top:.4rem;color:var(--muted)}
 @media (max-width:720px){
-  .classes{height:300vh}
-  .yr-row{grid-template-columns:1fr;gap:1rem}
-  .yr-big{font-size:min(34vw,22vh)}
+  .classes{height:240vh}
+  .classes .stage{min-height:0}
+  .classes h2{font-size:1.6rem;margin-bottom:.4rem}
+  .classes .intro{font-size:.98rem;margin-bottom:.75rem!important}
+  .yr-row{grid-template-columns:1fr;gap:.5rem}
+  .yr-big{font-size:min(26vw,15vh)}
+  .yr-big small{font-size:.95rem;margin-bottom:.25rem}
+  .yr-info h3{font-size:1.25rem}
+  .ticks{margin-top:1.5rem}
+  .ticks button{padding-top:.6rem}
+  .eras{font-size:.78rem}
   .ticks button span{display:none}
   .ticks button:nth-child(5n) span,.ticks button:first-child span{display:block}
 }
@@ -268,6 +283,7 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
 
 <nav class="mainnav" aria-label="Main">
   <div class="container">
+    <div class="links">
     <a class="opt" href="#welcome">Welcome</a>
     <a class="opt" href="#classes">Classes</a>
     <a href="#program">Program</a>
@@ -275,6 +291,7 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
     <a class="opt" href="#photos">Photos</a>
     <a class="opt" href="#faq">FAQ</a>
     <a class="opt" href="#committee">Committee</a>
+    </div>
     <a class="cta" href="#register">Register</a>
   </div>
   <div class="progress" id="progress"></div>
@@ -518,7 +535,7 @@ const CONFIG = {
   committee: [                         // photo: paste an image link or leave "" for initials
     { name: "Alfred Vargas",  role: "PhD",         years: "202X", photo: "" },
     { name: "Daniela Marin",  role: "PhD",         years: "2021", photo: "" },
-    { name: "Jeremy Feaster", role: "PhD Student", years: "201X", photo: "" },
+    { name: "Jeremy Feaster", role: "PhD",         years: "201X", photo: "" },
     { name: "Sang-Won Lee",   role: "Postdoc",     years: "202X", photo: "" }
   ]
 };
@@ -674,6 +691,7 @@ const CONFIG = {
   // scroll-linked behaviors
   const bar = document.getElementById("progress");
   const links = [...document.querySelectorAll(".mainnav a")];
+  const linkBox = document.querySelector(".mainnav .links"); let lastAct = null;
   const sections = links.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
   const items = [...document.querySelectorAll(".agenda tbody tr")];
 
@@ -687,8 +705,14 @@ const CONFIG = {
     setYear(Math.min(20, 1 + Math.floor(t * 19.999)));
 
     let active = null;
-    sections.forEach(sec => { if (sec.getBoundingClientRect().top < innerHeight * .35) active = sec; });
-    links.forEach(a => a.classList.toggle("active", !!active && a.getAttribute("href") === "#" + active.id));
+    let bestTop = -Infinity;
+    sections.forEach(sec => { const t = sec.getBoundingClientRect().top; if (t < innerHeight * .35 && t > bestTop) { bestTop = t; active = sec; } });
+    let act = null;
+    links.forEach(a => { const on = !!active && a.getAttribute("href") === "#" + active.id; a.classList.toggle("active", on); if (on) act = a; });
+    if (act && act !== lastAct && linkBox.scrollWidth > linkBox.clientWidth) {
+      lastAct = act;
+      linkBox.scrollTo({left: act.offsetLeft - linkBox.offsetLeft - 16, behavior: reduce ? "auto" : "smooth"});
+    }
 
     const mid = innerHeight * .45; let best = null, bd = 1e9;
     items.forEach(li => {
