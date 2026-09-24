@@ -79,12 +79,22 @@ focus-visible{outline:3px solid var(--lagunita);outline-offset:2px}
 .mainnav .cta:hover{background:var(--tint);color:var(--cardinal)}
 .mainnav .cta.active{color:var(--cardinal)}
 .progress{position:absolute;left:0;top:-1px;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--cardinal)}
+.menu-btn{display:none}
 @media (max-width:640px){
-  .mainnav .container{padding-right:1rem}
-  .mainnav .links{mask-image:linear-gradient(90deg,#000 85%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:1.5rem}
-  .mainnav .links a{padding:.9rem .75rem;font-size:1rem}
-  .mainnav .links a:first-child{padding-left:0}
-  .mainnav .cta{padding:.35rem .8rem;font-size:.95rem}
+  .mainnav .container{align-items:center;min-height:56px}
+  .menu-btn{display:flex;align-items:center;gap:.6rem;appearance:none;background:none;border:0;padding:.5rem 0;font:600 1.05rem var(--sans);color:var(--ink);cursor:pointer}
+  .menu-btn .bars,.menu-btn .bars::before,.menu-btn .bars::after{display:block;width:20px;height:2px;background:currentColor;position:relative;transition:transform .2s,background .2s}
+  .menu-btn .bars::before,.menu-btn .bars::after{content:"";position:absolute;left:0}
+  .menu-btn .bars::before{top:-6px}.menu-btn .bars::after{top:6px}
+  .menu-btn[aria-expanded="true"] .bars{background:transparent}
+  .menu-btn[aria-expanded="true"] .bars::before{transform:translateY(6px) rotate(45deg)}
+  .menu-btn[aria-expanded="true"] .bars::after{transform:translateY(-6px) rotate(-45deg)}
+  .mainnav .links{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;overflow:visible;background:var(--bg);border-bottom:1px solid var(--rule);box-shadow:0 8px 16px rgba(0,0,0,.08);padding:.25rem 0 .75rem}
+  .mainnav.open .links{display:flex}
+  .mainnav .links a,.mainnav .links a:first-child{padding:.8rem clamp(1.25rem,4vw,3rem);border-bottom:0;border-left:3px solid transparent;margin:0;font-size:1.05rem}
+  .mainnav .links a.active{border-left-color:var(--cardinal);background:var(--tint)}
+  .mainnav .cta{padding:.4rem .9rem;font-size:.95rem}
+  @media (prefers-reduced-motion:reduce){.menu-btn .bars,.menu-btn .bars::before,.menu-btn .bars::after{transition:none}}
 }
 
 /* Hero */
@@ -283,7 +293,8 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
 
 <nav class="mainnav" aria-label="Main">
   <div class="container">
-    <div class="links">
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="navlinks"><span class="bars" aria-hidden="true"></span>Menu</button>
+    <div class="links" id="navlinks">
     <a class="opt" href="#welcome">Welcome</a>
     <a class="opt" href="#classes">Classes</a>
     <a href="#program">Program</a>
@@ -691,7 +702,12 @@ const CONFIG = {
   // scroll-linked behaviors
   const bar = document.getElementById("progress");
   const links = [...document.querySelectorAll(".mainnav a")];
-  const linkBox = document.querySelector(".mainnav .links"); let lastAct = null;
+  const nav = document.querySelector(".mainnav"), menuBtn = nav.querySelector(".menu-btn");
+  function setMenu(open){ nav.classList.toggle("open", open); menuBtn.setAttribute("aria-expanded", String(open)); }
+  menuBtn.addEventListener("click", () => setMenu(!nav.classList.contains("open")));
+  nav.querySelectorAll(".links a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+  document.addEventListener("click", e => { if (!nav.contains(e.target)) setMenu(false); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && nav.classList.contains("open")) { setMenu(false); menuBtn.focus(); } });
   const sections = links.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
   const items = [...document.querySelectorAll(".agenda tbody tr")];
 
@@ -709,10 +725,7 @@ const CONFIG = {
     sections.forEach(sec => { const t = sec.getBoundingClientRect().top; if (t < innerHeight * .35 && t > bestTop) { bestTop = t; active = sec; } });
     let act = null;
     links.forEach(a => { const on = !!active && a.getAttribute("href") === "#" + active.id; a.classList.toggle("active", on); if (on) act = a; });
-    if (act && act !== lastAct && linkBox.scrollWidth > linkBox.clientWidth) {
-      lastAct = act;
-      linkBox.scrollTo({left: act.offsetLeft - linkBox.offsetLeft - 16, behavior: reduce ? "auto" : "smooth"});
-    }
+
 
     const mid = innerHeight * .45; let best = null, bd = 1e9;
     items.forEach(li => {
