@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>20 Years of Science in the Jaramillo Lab · Reunion 2027</title>
+<meta name="description" content="Celebrating 20 years of science in the Jaramillo Lab: a one-day reunion at Stanford on Saturday, July 31, 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cardinal:#8C1515;
+  --cardinal-dark:#6E1010;
+  --black:#2E2D29;
+  --stone:#8A817C;
+  --fog:#F7F6F4;
+  --tint:#F4ECEA;
+  --white:#FFFFFF;
+  --plum:#7B5A78;
+  --palo-alto:#4E7A6E;
+  --lagunita:#4A7F8E;
+  --rose:#A04545;
+
+  --bg:var(--white);
+  --bg-alt:var(--fog);
+  --ink:var(--black);
+  --muted:#5F5E5A;
+  --rule:#E3E1DD;
+  --link:var(--cardinal);
+
+  --sans:"Source Sans 3","Source Sans Pro","Helvetica Neue",Arial,sans-serif;
+  --serif:"Source Serif 4","Source Serif Pro",Georgia,"Times New Roman",serif;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1C1B19; --bg-alt:#252420; --ink:#F1F0EC; --muted:#B9B6AE; --rule:#3B3934; --link:#E59A90; --tint:#2E2322; --cardinal:#D98A80;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1C1B19; --bg-alt:#252420; --ink:#F1F0EC; --muted:#B9B6AE; --rule:#3B3934; --link:#E59A90; --tint:#2E2322; --cardinal:#D98A80;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:1.125rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:var(--link);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+focus-visible{outline:3px solid var(--lagunita);outline-offset:2px}
+.container{max-width:1200px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+.skip{position:absolute;left:-999px;top:0;background:var(--white);color:var(--cardinal);padding:.5rem 1rem;z-index:100}
+.skip:focus{left:1rem}
+
+
+/* Local header */
+.masthead{background:var(--bg)}
+.masthead .container{display:flex;align-items:center;gap:1.25rem;padding-top:1.5rem;padding-bottom:1.25rem}
+.lockup{display:flex;align-items:center;gap:1rem;text-decoration:none;color:var(--ink)}
+.lockup:hover{color:var(--ink)}
+.lockup .l1{font-weight:700;font-size:clamp(1.5rem,3vw,2rem);line-height:1;letter-spacing:-.01em}
+.lockup .bar{width:1px;align-self:stretch;background:var(--ink);opacity:.6}
+.lockup .l2{font-size:clamp(1rem,2vw,1.35rem);line-height:1.1;color:var(--muted)}
+
+/* Main nav */
+.mainnav{position:sticky;top:0;z-index:20;background:var(--bg);border-top:1px solid var(--rule);box-shadow:none;border-bottom:1px solid var(--rule)}
+.mainnav .container{display:flex;align-items:stretch;gap:0;overflow-x:auto;scrollbar-width:none}
+.mainnav .container::-webkit-scrollbar{display:none}
+.mainnav a{display:block;padding:1rem 1.1rem;color:var(--ink);text-decoration:none;font-weight:600;font-size:1.05rem;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-1px}
+.mainnav a:first-child{padding-left:0}
+.mainnav a:hover{color:var(--link)}
+.mainnav a.active{border-bottom-color:var(--cardinal);color:var(--ink)}
+.mainnav .cta{margin-left:auto;align-self:center;padding:.4rem 1rem;border:1.5px solid var(--cardinal);color:var(--cardinal);border-radius:3px}
+.mainnav .cta:hover{background:var(--tint);color:var(--cardinal)}
+.mainnav .cta.active{color:var(--cardinal)}
+.progress{position:absolute;left:0;top:-1px;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--cardinal)}
+@media (max-width:640px){.mainnav .opt{display:none}.mainnav a[href="#program"]{padding-left:0}}
+
+/* Hero */
+.hero{background:var(--bg-alt);border-bottom:1px solid var(--rule)}
+.hero .container{display:grid;grid-template-columns:1.4fr 1fr;gap:3.5rem;align-items:end;padding-top:clamp(3rem,7vw,5.5rem);padding-bottom:clamp(3rem,7vw,5rem)}
+.hero .super{font-size:1.15rem;margin:0 0 1rem;color:var(--cardinal);font-weight:600}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,5.6vw,4.4rem);line-height:1.05;letter-spacing:-.015em;margin:0 0 1.5rem;color:var(--ink)}
+.hero .lede{font-size:1.25rem;max-width:38ch;margin:0 0 2rem;color:var(--muted)}
+.hero .btns{display:flex;flex-wrap:wrap;gap:1rem}
+.btn{display:inline-block;padding:.75rem 1.5rem;font-weight:600;font-size:1.08rem;text-decoration:none;border:1.5px solid transparent;line-height:1.2;border-radius:3px}
+.btn.red{background:var(--cardinal);color:#fff}
+.btn.red:hover{background:var(--cardinal-dark);color:#fff}
+.btn.outline{border-color:var(--cardinal);color:var(--cardinal);background:transparent}
+.btn.outline:hover{background:var(--tint);color:var(--cardinal)}
+:root[data-theme="dark"] .btn.red{color:#1C1B19}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.red{color:#1C1B19}}
+.btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
+
+.facts-panel{background:var(--bg);border:1px solid var(--rule);border-top:3px solid var(--cardinal);padding:.5rem 1.5rem 1.5rem}
+.facts-panel dl{margin:0}
+.facts-panel .row{display:grid;grid-template-columns:6.5rem 1fr;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--rule)}
+.facts-panel dt{font-weight:700}
+.facts-panel dd{margin:0;color:var(--muted)}
+.count{display:flex;gap:2rem;margin-top:1.4rem}
+.count div{display:flex;flex-direction:column}
+.count b{font-family:var(--serif);font-weight:600;font-size:clamp(2.4rem,4.5vw,3.2rem);line-height:1;font-variant-numeric:tabular-nums;color:var(--cardinal)}
+.count span{font-size:.95rem;color:var(--muted);margin-top:.3rem}
+@media (max-width:900px){.hero .container{grid-template-columns:1fr;align-items:start;gap:2.5rem}}
+
+/* Sections */
+.section{padding:clamp(3.5rem,7vw,5.5rem) 0}
+.section.alt{background:var(--bg-alt)}
+h2{font-weight:700;font-size:clamp(2rem,3.6vw,2.75rem);line-height:1.15;letter-spacing:-.01em;margin:0 0 1rem}
+h3{font-weight:700;font-size:1.3rem;line-height:1.25;margin:0 0 .3rem}
+.intro{font-size:1.25rem;color:var(--muted);max-width:60ch;margin:0 0 2.5rem}
+
+/* Welcome */
+.welcome{display:grid;grid-template-columns:1fr 1.7fr;gap:3rem}
+.welcome .letter{font-family:var(--serif);font-size:1.2rem;line-height:1.7;max-width:62ch}
+.welcome .letter p{margin:0 0 1.2rem}
+.welcome .sig{font-family:var(--sans);font-weight:600;color:var(--muted)}
+@media (max-width:900px){.welcome{grid-template-columns:1fr;gap:.5rem}}
+
+/* Classes scroll scene */
+.classes{position:relative;height:340vh;background:var(--bg-alt)}
+.classes .stage{position:sticky;top:58px;height:calc(100vh - 58px);min-height:540px;display:flex;align-items:center;overflow:hidden}
+.classes .stage .container{width:100%}
+.yr-row{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end}
+.yr-big{font-family:var(--serif);font-weight:600;font-size:clamp(5rem,min(19vw,26vh),14rem);line-height:.85;letter-spacing:-.03em;color:var(--c,var(--cardinal));font-variant-numeric:tabular-nums;transition:color .4s}
+.yr-big small{display:block;font-family:var(--sans);font-size:1.15rem;font-weight:600;letter-spacing:0;color:var(--muted);margin-bottom:.6rem}
+.yr-info h3{font-size:1.6rem;margin-bottom:.4rem}
+.yr-info p{color:var(--muted);margin:0 0 .75rem;max-width:44ch}
+.yr-info .rep{display:inline-block;font-weight:600;font-size:1rem;padding:.3rem .8rem;border:1.5px solid var(--c,var(--cardinal));color:var(--c,var(--cardinal));border-radius:3px;transition:color .4s,border-color .4s}
+.who{margin:.25rem 0 .9rem}
+.who .n{font-weight:700;color:var(--ink);font-size:1.1rem}
+.who ul{list-style:none;margin:.4rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.35rem .5rem;max-width:46ch}
+.who li{background:var(--bg);border:1px solid var(--rule);border-radius:3px;padding:.15rem .55rem;font-size:.95rem}
+.who li.more{border-style:dashed;color:var(--muted)}
+.who .empty{color:var(--muted);margin:0}
+.yr-info .session{font-size:.95rem;color:var(--muted);margin:0 0 .75rem}
+.total{font-weight:600;color:var(--cardinal)}
+.ticks b{display:block;font-size:.75rem;color:var(--muted);height:1em;line-height:1;margin-bottom:.6rem}
+.ticks{display:grid;grid-template-columns:repeat(20,1fr);gap:4px;margin-top:3rem}
+.ticks button{appearance:none;border:0;background:transparent;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:.45rem;color:var(--muted);font:600 .85rem var(--sans)}
+.ticks i{display:block;width:100%;height:10px;border-radius:2px;background:var(--rule);transition:background .3s,transform .3s;transform-origin:50% 100%}
+.ticks button.on i{background:var(--c)}
+.ticks button.cur i{transform:scaleY(2.4)}
+.ticks button.cur{color:var(--ink)}
+.eras{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:.7rem;font-size:.9rem;font-weight:600}
+.eras span{border-top:3px solid var(--c);padding-top:.4rem;color:var(--muted)}
+@media (max-width:720px){
+  .classes{height:300vh}
+  .yr-row{grid-template-columns:1fr;gap:1rem}
+  .yr-big{font-size:min(34vw,22vh)}
+  .ticks button span{display:none}
+  .ticks button:nth-child(5n) span,.ticks button:first-child span{display:block}
+}
+@media (prefers-reduced-motion:reduce){.yr-big,.ticks i,.yr-info .rep{transition:none}}
+
+.e1{--c:var(--plum)}.e2{--c:var(--palo-alto)}.e3{--c:var(--lagunita)}.e4{--c:var(--rose)}
+
+/* Program */
+.day + .day{margin-top:4rem}
+.agenda-title{font-family:var(--serif);font-weight:600;font-size:1.7rem;color:var(--cardinal);margin:0 0 .75rem}
+.agenda-title span{font-family:var(--sans);font-size:1.05rem;font-weight:600;color:var(--muted);margin-left:.5rem}
+.agenda{width:100%;border-collapse:collapse;font-size:1.02rem}
+.agenda th{text-align:left;font-weight:700;padding:.5rem .75rem .6rem;border-bottom:2px solid var(--cardinal)}
+.agenda td{padding:1rem .75rem;border-bottom:1px solid var(--rule);vertical-align:top;transition:background .3s}
+.agenda td.t{width:11.5rem;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.agenda .item{font-weight:600}
+.agenda .desc{display:block;color:var(--muted);font-weight:400;font-size:.97rem;margin-top:.15rem}
+.agenda tr.brk td{color:var(--muted);font-weight:400;padding-top:.6rem;padding-bottom:.6rem}
+.agenda tr.brk .item{font-weight:400}
+.agenda .era{display:inline-block;width:.6rem;height:.6rem;border-radius:50%;background:var(--c);margin-right:.5rem;vertical-align:.08em}
+.agenda tr.now td{background:var(--tint)}
+.addl{margin-top:1.5rem}
+.addl b{display:block;font-family:var(--serif);font-weight:600}
+.addl p{margin:.2rem 0 0;color:var(--muted);font-size:1rem}
+@media (max-width:640px){
+  .agenda thead{display:none}
+  .agenda tr{display:block;border-bottom:1px solid var(--rule);padding:.75rem 0}
+  .agenda td{display:block;border:0;padding:.1rem .25rem}
+  .agenda td.t{width:auto}
+  .agenda tr.brk td{padding:.1rem .25rem}
+}
+@media (prefers-reduced-motion:reduce){.agenda td{transition:none}}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1.5rem}
+.card{background:var(--bg-alt);border:1px solid var(--rule);border-radius:3px;padding:1.4rem 1.5rem}
+.section.alt .card{background:var(--bg)}
+.card h4{font-size:1.2rem;margin:0 0 .3rem}
+.card .meta{font-size:.95rem;font-weight:600;color:var(--palo-alto);margin-bottom:.5rem}
+:root[data-theme="dark"] .card .meta{color:#6FC2B3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .card .meta{color:#6FC2B3}}
+.card p{margin:0;color:var(--muted);font-size:1.02rem}
+@media (max-width:900px){.cards{grid-template-columns:1fr}}
+
+/* Venue */
+.venue{display:grid;grid-template-columns:1.2fr 1fr;gap:4rem}
+.dl div{padding:1.1rem 0;border-bottom:1px solid var(--rule)}
+.dl div:first-child{border-top:1px solid var(--rule)}
+.dl dt{font-weight:700}
+.dl dd{margin:.25rem 0 0;color:var(--muted)}
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.list li{padding:1.1rem 0;border-bottom:1px solid var(--rule)}
+.list b{display:block}
+.list span{color:var(--muted)}
+@media (max-width:900px){.venue{grid-template-columns:1fr;gap:2rem}}
+
+/* Photos */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:1rem}
+.ph{background:var(--bg-alt);border:1px solid var(--rule);display:flex;align-items:flex-end;padding:.9rem 1rem;color:var(--muted);font-weight:600;font-size:1rem;position:relative}
+.ph::before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--c,var(--stone))}
+.ph.big{grid-column:span 2;grid-row:span 2}
+@media (max-width:720px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px}}
+
+/* Register */
+.reg{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.callout{border-left:4px solid var(--cardinal);padding:.25rem 0 .25rem 1.25rem;margin:0 0 1.5rem}
+.callout b{display:block;font-family:var(--serif);font-weight:600;font-size:1.5rem}
+.callout span{color:var(--muted)}
+.asks{margin:0;padding:0;list-style:none;border-top:1px solid var(--rule)}
+.asks li{padding:.8rem 0;border-bottom:1px solid var(--rule);color:var(--muted)}
+.asks b{color:var(--ink)}
+@media (max-width:900px){.reg{grid-template-columns:1fr;gap:2rem}}
+
+/* FAQ */
+.faq{max-width:860px;border-top:1px solid var(--rule)}
+details{border-bottom:1px solid var(--rule)}
+summary{cursor:pointer;font-weight:700;font-size:1.2rem;padding:1.1rem 2.5rem 1.1rem 0;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:.5rem;top:50%;width:10px;height:10px;border-right:2px solid var(--cardinal);border-bottom:2px solid var(--cardinal);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
+
+/* Committee */
+.committee{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;list-style:none;margin:0;padding:0}
+.person .photo{aspect-ratio:4/5;width:100%;background:var(--bg);border:1px solid var(--rule);border-radius:3px;overflow:hidden;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.person .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.person .photo span{font-family:var(--serif);font-weight:600;font-size:2.6rem;color:var(--stone)}
+.person h3{font-size:1.2rem;margin:0}
+.person .role{color:var(--muted);margin:.15rem 0 0}
+.person .yrs{color:var(--cardinal);font-weight:600;font-size:.98rem;margin:.1rem 0 0}
+@media (max-width:900px){.committee{grid-template-columns:repeat(2,1fr);gap:1.5rem}}
+
+/* Local footer */
+.local-footer{background:var(--bg-alt);border-top:3px solid var(--cardinal);padding:3rem 0 3.5rem}
+.local-footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem}
+.local-footer .lockup .l1{font-size:1.5rem}
+.local-footer p{margin:.75rem 0 0;color:var(--muted)}
+.local-footer h3{font-size:1.05rem;margin-bottom:.4rem}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main-content">Skip to main content</a>
+
+
+<header class="masthead">
+  <div class="container">
+    <a class="lockup" href="#top" id="top">
+      <span class="l1">Jaramillo Lab</span>
+      <span class="bar" aria-hidden="true"></span>
+      <span class="l2">20-Year Reunion</span>
+    </a>
+  </div>
+</header>
+
+<nav class="mainnav" aria-label="Main">
+  <div class="container">
+    <a class="opt" href="#welcome">Welcome</a>
+    <a class="opt" href="#classes">Classes</a>
+    <a href="#program">Program</a>
+    <a class="opt" href="#venue">Venue</a>
+    <a class="opt" href="#photos">Photos</a>
+    <a class="opt" href="#faq">FAQ</a>
+    <a class="opt" href="#committee">Committee</a>
+    <a class="cta" href="#register">Register</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</nav>
+
+<main id="main-content">
+
+<section class="hero">
+  <div class="container">
+    <div>
+      <p class="super">Department of Chemical Engineering</p>
+      <h1>20 Years of Science in the Jaramillo Lab</h1>
+      <p class="lede">A reunion for everyone who has been part of the group across two decades: stories from every era, lightning talks, games, dinner and an afterparty on the patio.</p>
+      <div class="btns">
+        <a class="btn red" href="#register">Register</a>
+        <a class="btn outline" id="cal" target="_blank" rel="noopener">Add to Google Calendar</a>
+      </div>
+    </div>
+    <div class="facts-panel">
+      <dl>
+        <div class="row"><dt>Reunion</dt><dd>Saturday, July 31, 2027</dd></div>
+        <div class="row"><dt>Optional</dt><dd>Sunday, August 1: hike and brunch</dd></div>
+        <div class="row"><dt>Location</dt><dd>Stanford campus, Stanford, California</dd></div>
+      </dl>
+      <div class="count" aria-live="off">
+        <div><b id="cd-d">–</b><span>days</span></div>
+        <div><b id="cd-h">–</b><span>hours</span></div>
+        <div><b id="cd-m">–</b><span>minutes</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="welcome">
+  <div class="container welcome">
+    <h2>Twenty years, one day together</h2>
+    <div class="letter">
+      <p>Over twenty years, the Jaramillo group has been home to students, postdocs, visiting scholars and staff who went on to faculty posts, national labs, startups and industry around the world. What started as benches in one lab has become a community spread across many time zones.</p>
+      <p>This reunion is a chance to bring that community back together for a day: to relive each era of the lab through the people who lived it, to meet the current group, and to catch up over dinner the way we used to after a long day of measurements.</p>
+      <p>Families and partners are warmly welcome at the dinner and on Sunday. We hope you can join us.</p>
+      <p class="sig"><a href="#committee">The reunion organizing committee</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="classes" id="classes" aria-label="Twenty classes">
+  <div class="stage">
+    <div class="container">
+      <h2>Twenty classes, one lab</h2>
+      <p class="intro" style="margin-bottom:1.75rem">Your class is the year you joined the lab. Scroll through all twenty classes to see who’s coming, or select a year to jump to it. <span class="total" id="total"></span></p>
+      <div class="yr-row">
+        <div class="yr-big" id="yr-big"><small>Year</small><span id="yr-num">1</span></div>
+        <div class="yr-info" aria-live="polite">
+          <h3 id="yr-era">Years 1–5: The beginning</h3>
+          <div class="who" id="yr-who"></div>
+          <span class="rep" id="yr-rep">Class representative: to be announced</span>
+        </div>
+      </div>
+      <div class="ticks" id="ticks"></div>
+      <div class="eras">
+        <span class="e1">Years 1–5</span>
+        <span class="e2">Years 6–10</span>
+        <span class="e3">Years 11–15</span>
+        <span class="e4">Years 16–20</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="program">
+  <div class="container">
+    <h2>Program</h2>
+    <p class="intro">The main program is on Saturday. Sunday activities are optional for those staying in town.</p>
+
+    <div class="day">
+      <h3 class="agenda-title">Saturday, July 31<span>Main program</span></h3>
+      <table class="agenda">
+        <thead><tr><th scope="col">Time</th><th scope="col">Agenda item</th></tr></thead>
+        <tbody>
+          <tr><td class="t">8:00 – 9:00 am</td><td><span class="item">Registration and coffee</span></td></tr>
+          <tr><td class="t">9:00 – 9:15 am</td><td><span class="item">Welcome from Tom</span></td></tr>
+          <tr><td class="t">9:15 – 9:40 am</td><td><span class="item"><span class="era e1" aria-hidden="true"></span>Fireside chat: the first two students</span><span class="desc">A conversation about how the lab started. Years 1–5.</span></td></tr>
+          <tr><td class="t">9:40 – 10:00 am</td><td><span class="item">Alumni remarks</span><span class="desc">Including a “where are they now” map of alumni.</span></td></tr>
+          <tr class="brk"><td class="t">10:00 – 10:10 am</td><td><span class="item">Coffee break</span></td></tr>
+          <tr><td class="t">10:10 – 11:15 am</td><td><span class="item"><span class="era e2" aria-hidden="true"></span>Memory lane: Years 6–10</span><span class="desc">Session chair introduction, lightning talks and the “Guess the Year” photo game.</span></td></tr>
+          <tr class="brk"><td class="t">11:15 – 11:25 am</td><td><span class="item">Coffee break</span></td></tr>
+          <tr><td class="t">11:25 am – 12:30 pm</td><td><span class="item"><span class="era e3" aria-hidden="true"></span>Memory lane: Years 11–15</span><span class="desc">Session chair introduction, lightning talks and an interactive game.</span></td></tr>
+          <tr><td class="t">12:30 – 1:30 pm</td><td><span class="item">Lunch</span></td></tr>
+          <tr><td class="t">1:30 – 2:35 pm</td><td><span class="item"><span class="era e4" aria-hidden="true"></span>The lab today: Years 16–20</span><span class="desc">Session chair introduction and lightning talks from current students and postdocs.</span></td></tr>
+          <tr class="brk"><td class="t">2:35 – 2:45 pm</td><td><span class="item">Coffee break</span></td></tr>
+          <tr><td class="t">2:45 – 2:55 pm</td><td><span class="item">Group photo</span></td></tr>
+          <tr><td class="t">2:55 – 3:15 pm</td><td><span class="item">Memory lane montage and letters from absent alumni</span></td></tr>
+          <tr><td class="t">3:15 – 3:30 pm</td><td><span class="item">A special moment</span></td></tr>
+          <tr><td class="t">3:30 – 4:30 pm</td><td><span class="item">Outdoor games</span><span class="desc">Cornhole and lawn games, come and go.</span></td></tr>
+          <tr class="brk"><td class="t">4:30 – 4:45 pm</td><td><span class="item">Break</span></td></tr>
+          <tr><td class="t">4:45 – 6:45 pm</td><td><span class="item">Dinner</span><span class="desc">Partners and families welcome.</span></td></tr>
+          <tr><td class="t">6:45 – 6:55 pm</td><td><span class="item">Thank you and afterparty announcement</span></td></tr>
+          <tr><td class="t">6:55 – 8:45 pm</td><td><span class="item">Afterparty on the patio</span><span class="desc">Optional, come and go.</span></td></tr>
+        </tbody>
+      </table>
+      <div class="addl"><b>Additional information</b><p>Times follow the current draft agenda and may shift slightly. Rooms will be announced closer to the date.</p></div>
+    </div>
+
+    <div class="day">
+      <h3 class="agenda-title">Sunday, August 1<span>Optional</span></h3>
+      <table class="agenda">
+        <thead><tr><th scope="col">Time</th><th scope="col">Agenda item</th></tr></thead>
+        <tbody>
+          <tr><td class="t">Morning</td><td><span class="item">Group hike</span><span class="desc">Chosen by vote on the registration form.</span></td></tr>
+          <tr><td class="t">Midday</td><td><span class="item">Brunch in Palo Alto</span><span class="desc">A relaxed meal before people head to the airport.</span></td></tr>
+        </tbody>
+      </table>
+        <div class="cards">
+          <div class="card"><h4>The Dish loop</h4><div class="meta">Easy, about 3.5 miles</div><p>Paved loop in the Stanford foothills, right next to campus. Good for all ages and strollers.</p></div>
+          <div class="card"><h4>Windy Hill</h4><div class="meta">Moderate, a short drive</div><p>Open ridgeline trails with wide views over the Bay on a clear morning.</p></div>
+          <div class="card"><h4>Half Moon Bay coast</h4><div class="meta">Easy, half day</div><p>Coastal bluff walk over the hills, with the option of lunch by the water.</p></div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="venue">
+  <div class="container">
+    <h2>Venue and travel</h2>
+    <p class="intro">Saturday’s events are on the Stanford campus. Room details will be confirmed closer to the date.</p>
+    <div class="venue">
+      <dl class="dl">
+        <div><dt>Location</dt><dd>Stanford campus, Stanford, California. Rooms to be announced.</dd></div>
+        <div><dt>Flying in</dt><dd>San Francisco (SFO) and San José (SJC) are both about 30 to 40 minutes by car. Oakland (OAK) is a little farther.</dd></div>
+        <div><dt>By train</dt><dd>Caltrain to Palo Alto station, then the free Marguerite shuttle onto campus.</dd></div>
+        <div><dt>Parking</dt><dd>Visitor parking is generally easier on weekends. We will share parking details once the venue is set.</dd></div>
+      </dl>
+      <div>
+        <h3>Where to stay</h3>
+        <p style="color:var(--muted);margin:0 0 1rem">Late July is busy around Stanford, so we recommend booking early.</p>
+        <ul class="list">
+          <li><b>Stanford Guest House</b><span>On the edge of campus, convenient for Saturday.</span></li>
+          <li><b>Sheraton Palo Alto</b><span>Across from campus, walking distance to University Avenue.</span></li>
+          <li><b>Downtown Palo Alto hotels</b><span>Close to Caltrain, restaurants and the Sunday brunch.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="photos">
+  <div class="container">
+    <h2>Send us your photos</h2>
+    <p class="intro">Old group photos and lab moments from any era will feed the “Guess the Year” game and the memory lane montage. Send yours to the organizers and tell us roughly what year each one is from.</p>
+    <div class="gallery">
+      <div class="ph big e1" style="--c:var(--plum)">Years 1–5</div>
+      <div class="ph" style="--c:var(--palo-alto)">Years 6–10</div>
+      <div class="ph" style="--c:var(--lagunita)">Years 11–15</div>
+      <div class="ph" style="--c:var(--rose)">Years 16–20</div>
+      <div class="ph">Group outings</div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="register">
+  <div class="container reg">
+    <div>
+      <h2>Register</h2>
+      <div class="callout"><b>Please register by May 1, 2027</b><span>It takes about five minutes.</span></div>
+      <p style="color:var(--muted);margin:0 0 1.75rem">Registering helps us plan catering, the lightning talks, dinner and the Sunday activity.</p>
+      <a class="btn red" id="regbtn" target="_blank" rel="noopener">Open the registration form</a>
+      <p class="note" id="regnote"></p>
+    </div>
+    <div>
+      <h3 style="margin-bottom:.75rem">The form will ask for</h3>
+      <ul class="asks">
+        <li><b>Your details:</b> name, current position and institution, email</li>
+        <li><b>Your class:</b> the year you joined the lab, from Year 1 to Year 20</li>
+        <li><b>Class representative:</b> whether you would like to represent your class</li>
+        <li><b>Name on the website:</b> whether we can list your name under your class</li>
+        <li><b>Attendance:</b> Saturday program, dinner, afterparty and Sunday</li>
+        <li><b>A lightning talk:</b> whether you would like to give one</li>
+        <li><b>Photos:</b> old lab photos for the game and montage</li>
+        <li><b>Guests:</b> partners or family joining for dinner or Sunday</li>
+        <li><b>Dietary needs</b> for lunch and dinner</li>
+        <li><b>Sunday vote:</b> the Dish, Windy Hill or the coast</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <details><summary>Who is invited?</summary><p>Everyone who has been part of the Jaramillo group: former and current graduate students, postdocs, visiting researchers, undergraduates and staff, along with close collaborators.</p></details>
+      <details><summary>What is a class representative?</summary><p>Your class is the year you joined the lab, from Year 1 to Year 20. For example, if you joined in the lab’s third year, you are in the Year 3 class. A class representative helps reach out to their classmates and makes sure their year is part of the day. You can volunteer on the registration form.</p></details>
+      <details><summary>Can I bring my family?</summary><p>Yes. Partners and families are welcome at dinner and on Sunday. Please include them in your registration so we can plan numbers.</p></details>
+      <details><summary>Do I have to give a talk?</summary><p>Not at all. Lightning talks are about eight minutes, grouped by era, and we encourage speakers to open with a favorite lab memory before the science. We would love to hear from people in every kind of role, not just research.</p></details>
+      <details><summary>I can’t make it. Can I still take part?</summary><p>Yes. Send the organizers a short note or video and it will be shown during the memory lane montage with letters from absent alumni.</p></details>
+      <details><summary>Is there a registration fee?</summary><p>To be confirmed. We will post details here once the budget for catering and dinner is set.</p></details>
+      <details><summary>I need a letter for travel or a visa.</summary><p>Email the organizers and we will send a signed invitation letter.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="committee">
+  <div class="container">
+    <h2>The organizing committee</h2>
+    <p class="intro">Questions, ideas or old photos to share? Reach out to any of us.</p>
+    <ul class="committee" id="committee-list"></ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="local-footer">
+    <div class="container">
+      <div>
+        <a class="lockup" href="#top"><span class="l1">Jaramillo Lab</span><span class="bar" aria-hidden="true"></span><span class="l2">20-Year Reunion</span></a>
+        <p>Department of Chemical Engineering · Stanford, California</p>
+      </div>
+      <div>
+        <h3>Contact the organizers</h3>
+        <a id="mail">Email the organizing committee</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== Edit these ===== */
+const CONFIG = {
+  registrationUrl: "",                 // paste your Google Form link here
+  organizerEmail: "reunion@example.com",
+  start: "2027-07-31T08:00:00-07:00",  // Pacific Daylight Time
+  end:   "2027-07-31T20:45:00-07:00",
+  reps: {},
+  // Registrations: a Google Sheet tab published to the web as CSV (see instructions).
+  // Only works when the site is hosted on a normal web host (e.g. GitHub Pages).
+  responsesCsvUrl: "",
+  columns: { name: "name", classYear: "class", showName: "website" }, // words found in each column header
+  refreshMinutes: 5,                            // e.g. { 1: "Jane Doe", 2: "John Smith" }
+  committee: [                         // photo: paste an image link or leave "" for initials
+    { name: "Alfred Vargas",  role: "PhD",         years: "202X", photo: "" },
+    { name: "Daniela Marin",  role: "PhD",         years: "2021", photo: "" },
+    { name: "Jeremy Feaster", role: "PhD Student", years: "201X", photo: "" },
+    { name: "Sang-Won Lee",   role: "Postdoc",     years: "202X", photo: "" }
+  ]
+};
+/* ====================== */
+
+(function(){
+  document.documentElement.classList.add("js");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // registration + contact
+  const reg = document.getElementById("regbtn"), note = document.getElementById("regnote");
+  if (CONFIG.registrationUrl) { reg.href = CONFIG.registrationUrl; }
+  else {
+    reg.removeAttribute("target"); reg.href = "#register";
+    reg.textContent = "Registration opens soon"; reg.setAttribute("aria-disabled","true");
+    note.textContent = "The form link will appear here once it is ready.";
+  }
+  document.getElementById("mail").href = "mailto:" + CONFIG.organizerEmail + "?subject=" + encodeURIComponent("Jaramillo Lab 20-Year Reunion");
+
+  // committee
+  const list = document.getElementById("committee-list");
+  CONFIG.committee.forEach(m => {
+    const li = document.createElement("li"); li.className = "person";
+    const ph = document.createElement("div"); ph.className = "photo";
+    if (m.photo) { const img = new Image(); img.src = m.photo; img.alt = m.name; ph.appendChild(img); }
+    else { const sp = document.createElement("span"); sp.setAttribute("aria-hidden","true");
+      const w = m.name.trim().split(/\s+/); sp.textContent = (w[0][0] + (w.length > 1 ? w[w.length-1][0] : "")).toUpperCase(); ph.appendChild(sp); }
+    const h = document.createElement("h3"); h.textContent = m.name;
+    const r = document.createElement("p"); r.className = "role"; r.textContent = m.role;
+    const y = document.createElement("p"); y.className = "yrs"; y.textContent = m.years;
+    li.append(ph, h, r, y); list.appendChild(li);
+  });
+
+  // calendar
+  const fmt = d => new Date(d).toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
+  const cal = new URL("https://calendar.google.com/calendar/render");
+  cal.searchParams.set("action","TEMPLATE");
+  cal.searchParams.set("text","20 Years of the Jaramillo Lab: Reunion");
+  cal.searchParams.set("dates", fmt(CONFIG.start) + "/" + fmt(CONFIG.end));
+  cal.searchParams.set("location","Stanford, CA");
+  cal.searchParams.set("details","One-day reunion for the Jaramillo Lab. Optional hike and brunch on Sunday, August 1.");
+  document.getElementById("cal").href = cal.toString();
+
+  // countdown
+  const target = new Date(CONFIG.start).getTime();
+  const cd = ["cd-d","cd-h","cd-m"].map(id => document.getElementById(id));
+  function tick(){
+    let diff = Math.max(0, target - Date.now());
+    const days = Math.floor(diff/864e5); diff -= days*864e5;
+    const hrs = Math.floor(diff/36e5); diff -= hrs*36e5;
+    cd[0].textContent = days; cd[1].textContent = hrs; cd[2].textContent = Math.floor(diff/6e4);
+  }
+  tick(); setInterval(tick, 30000);
+
+  // twenty classes
+  const ERAS = [
+    {c:"var(--plum)",      name:"Years 1–5: The beginning"},
+    {c:"var(--palo-alto)", name:"Years 6–10: Memory lane"},
+    {c:"var(--lagunita)",  name:"Years 11–15: Memory lane"},
+    {c:"var(--rose)",  name:"Years 16–20: The lab today"}
+  ];
+  const scene = document.getElementById("classes"), ticks = document.getElementById("ticks");
+  const big = document.getElementById("yr-big"), num = document.getElementById("yr-num");
+  const eraEl = document.getElementById("yr-era"), repEl = document.getElementById("yr-rep");
+  const btns = [];
+  for (let y=1; y<=20; y++){
+    const b = document.createElement("button");
+    b.type = "button";
+    b.style.setProperty("--c", ERAS[Math.floor((y-1)/5)].c);
+    b.setAttribute("aria-label","Year " + y);
+    b.innerHTML = "<b></b><i></i><span>" + y + "</span>";
+    b.addEventListener("click", () => {
+      const span = scene.offsetHeight - innerHeight + 58;
+      scrollTo({top: scene.offsetTop - 58 + span * ((y-1)/19) + 1, behavior: reduce ? "auto" : "smooth"});
+    });
+    ticks.appendChild(b); btns.push(b);
+  }
+  const whoEl = document.getElementById("yr-who"), totalEl = document.getElementById("total");
+  let roster = null; // { year: [names...] , counts: {year: n} }
+  function renderWho(y){
+    whoEl.textContent = "";
+    if (!roster) {
+      const p = document.createElement("p"); p.className = "empty";
+      p.textContent = "Names will appear here as people register.";
+      whoEl.appendChild(p); return;
+    }
+    const n = roster.counts[y] || 0, names = roster.names[y] || [];
+    const head = document.createElement("div"); head.className = "n";
+    head.textContent = n === 0 ? "No one from this class yet" : n + (n === 1 ? " person" : " people") + " from this class registered";
+    whoEl.appendChild(head);
+    if (names.length) {
+      const ul = document.createElement("ul"), MAX = 12;
+      names.slice(0, MAX).forEach(nm => { const li = document.createElement("li"); li.textContent = nm; ul.appendChild(li); });
+      const hidden = n - Math.min(names.length, MAX);
+      if (hidden > 0) { const li = document.createElement("li"); li.className = "more"; li.textContent = "+" + hidden + " more"; ul.appendChild(li); }
+      whoEl.appendChild(ul);
+    }
+  }
+  function parseCSV(text){
+    const rows = []; let row = [], f = "", q = false;
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i];
+      if (q) { if (c === '"') { if (text[i+1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
+      else if (c === '"') q = true;
+      else if (c === ",") { row.push(f); f = ""; }
+      else if (c === "\n" || c === "\r") { if (c === "\r" && text[i+1] === "\n") i++; row.push(f); rows.push(row); row = []; f = ""; }
+      else f += c;
+    }
+    if (f || row.length) { row.push(f); rows.push(row); }
+    return rows.filter(r => r.some(x => x.trim()));
+  }
+  async function loadRoster(){
+    if (!CONFIG.responsesCsvUrl) return;
+    try {
+      const res = await fetch(CONFIG.responsesCsvUrl, {cache: "no-store"});
+      if (!res.ok) throw new Error(res.status);
+      const rows = parseCSV(await res.text());
+      if (rows.length < 1) return;
+      const head = rows[0].map(h => h.toLowerCase());
+      const col = key => head.findIndex(h => h.includes(CONFIG.columns[key].toLowerCase()));
+      const iName = col("name"), iClass = col("classYear"), iShow = col("showName");
+      const counts = {}, names = {}; let total = 0;
+      rows.slice(1).forEach(r => {
+        const m = String(r[iClass] || "").match(/\d+/); const y = m ? +m[0] : 0;
+        if (y < 1 || y > 20) return;
+        total++; counts[y] = (counts[y] || 0) + 1;
+        const ok = iShow < 0 || /^y/i.test(String(r[iShow] || "").trim());
+        const nm = String(r[iName] || "").trim();
+        if (ok && nm) (names[y] = names[y] || []).push(nm);
+      });
+      Object.values(names).forEach(a => a.sort((a,b) => a.localeCompare(b)));
+      roster = {counts, names};
+      totalEl.textContent = total + (total === 1 ? " person has" : " people have") + " registered so far.";
+      btns.forEach((b,i) => { b.querySelector("b").textContent = counts[i+1] || ""; });
+      const y = cur; cur = 0; setYear(y || 1);
+    } catch (e) { /* keep placeholder */ }
+  }
+  let cur = 0;
+  function setYear(y){
+    if (y === cur) return; cur = y;
+    const e = ERAS[Math.floor((y-1)/5)];
+    num.textContent = y;
+    big.style.setProperty("--c", e.c); repEl.style.setProperty("--c", e.c);
+    eraEl.textContent = e.name;
+    renderWho(y);
+    repEl.textContent = "Class representative: " + (CONFIG.reps[y] || "to be announced");
+    btns.forEach((b,i) => { b.classList.toggle("on", i < y); b.classList.toggle("cur", i === y-1); });
+  }
+  setYear(1);
+  loadRoster();
+  if (CONFIG.responsesCsvUrl) setInterval(loadRoster, CONFIG.refreshMinutes * 60000);
+
+  // scroll-linked behaviors
+  const bar = document.getElementById("progress");
+  const links = [...document.querySelectorAll(".mainnav a")];
+  const sections = links.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+  const items = [...document.querySelectorAll(".agenda tbody tr")];
+
+  function onScroll(){
+    const max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = "scaleX(" + (max > 0 ? scrollY / max : 0) + ")";
+
+    const r = scene.getBoundingClientRect();
+    const span = scene.offsetHeight - (innerHeight - 58);
+    const t = Math.min(1, Math.max(0, (58 - r.top) / (span || 1)));
+    setYear(Math.min(20, 1 + Math.floor(t * 19.999)));
+
+    let active = null;
+    sections.forEach(sec => { if (sec.getBoundingClientRect().top < innerHeight * .35) active = sec; });
+    links.forEach(a => a.classList.toggle("active", !!active && a.getAttribute("href") === "#" + active.id));
+
+    const mid = innerHeight * .45; let best = null, bd = 1e9;
+    items.forEach(li => {
+      const b = li.getBoundingClientRect();
+      const d = Math.abs(b.top + b.height/2 - mid);
+      if (b.bottom > 0 && b.top < innerHeight && d < bd) { bd = d; best = li; }
+    });
+    items.forEach(li => li.classList.toggle("now", li === best && bd < innerHeight * .2));
+  }
+  let raf = 0;
+  addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; onScroll(); }); }, {passive:true});
+  addEventListener("resize", onScroll);
+  onScroll();
+})();
+</script>
+</body>
+</html>
