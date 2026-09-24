@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>20 Years of Science in the Jaramillo Lab · Reunion 2027</title>
-<meta name="description" content="Celebrating 20 years of science in the Jaramillo Lab: a one-day reunion at Stanford on Saturday, July 31, 2027.">
+<title>20 Years of Science in the Jaramillo Lab · Symposium and Reunion 2027</title>
+<meta name="description" content="Celebrating 20 years of science in the Jaramillo Lab: a one-day scientific symposium and alumni reunion at Stanford on Saturday, July 31, 2027.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
@@ -62,9 +62,9 @@ focus-visible{outline:3px solid var(--lagunita);outline-offset:2px}
 .masthead .container{display:flex;align-items:center;gap:1.25rem;padding-top:1.5rem;padding-bottom:1.25rem}
 .lockup{display:flex;align-items:center;gap:1rem;text-decoration:none;color:var(--ink)}
 .lockup:hover{color:var(--ink)}
-.lockup .l1{font-weight:700;font-size:clamp(1.5rem,3vw,2rem);line-height:1;letter-spacing:-.01em}
+.lockup .l1{white-space:nowrap;font-weight:700;font-size:clamp(1.5rem,3vw,2rem);line-height:1;letter-spacing:-.01em}
 .lockup .bar{width:1px;align-self:stretch;background:var(--ink);opacity:.6}
-.lockup .l2{font-size:clamp(1rem,2vw,1.35rem);line-height:1.1;color:var(--muted)}
+.lockup .l2{font-size:clamp(.95rem,2vw,1.35rem);line-height:1.15;color:var(--muted)}
 
 /* Main nav */
 .mainnav{position:sticky;top:0;z-index:20;background:var(--bg);border-top:1px solid var(--rule);box-shadow:none;border-bottom:1px solid var(--rule)}
@@ -261,7 +261,7 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
     <a class="lockup" href="#top" id="top">
       <span class="l1">Jaramillo Lab</span>
       <span class="bar" aria-hidden="true"></span>
-      <span class="l2">20-Year Reunion</span>
+      <span class="l2">Symposium &amp; Reunion 2027</span>
     </a>
   </div>
 </header>
@@ -285,9 +285,9 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
 <section class="hero">
   <div class="container">
     <div>
-      <p class="super">Department of Chemical Engineering</p>
+      <p class="super">Alumni Symposium and Reunion</p>
       <h1>20 Years of Science in the Jaramillo Lab</h1>
-      <p class="lede">A reunion for everyone who has been part of the group across two decades: stories from every era, lightning talks, games, dinner and an afterparty on the patio.</p>
+      <p class="lede">A one-day scientific symposium and reunion for current and former members of the Jaramillo group, with research talks from each period of the lab followed by dinner.</p>
       <div class="btns">
         <a class="btn red" href="#register">Register</a>
         <a class="btn outline" id="cal" target="_blank" rel="noopener">Add to Google Calendar</a>
@@ -295,7 +295,7 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
     </div>
     <div class="facts-panel">
       <dl>
-        <div class="row"><dt>Reunion</dt><dd>Saturday, July 31, 2027</dd></div>
+        <div class="row"><dt>Symposium</dt><dd>Saturday, July 31, 2027</dd></div>
         <div class="row"><dt>Optional</dt><dd>Sunday, August 1: hike and brunch</dd></div>
         <div class="row"><dt>Location</dt><dd>Stanford campus, Stanford, California</dd></div>
       </dl>
@@ -310,12 +310,12 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
 
 <section class="section" id="welcome">
   <div class="container welcome">
-    <h2>Twenty years, one day together</h2>
+    <h2>About the symposium</h2>
     <div class="letter">
-      <p>Over twenty years, the Jaramillo group has been home to students, postdocs, visiting scholars and staff who went on to faculty posts, national labs, startups and industry around the world. What started as benches in one lab has become a community spread across many time zones.</p>
-      <p>This reunion is a chance to bring that community back together for a day: to relive each era of the lab through the people who lived it, to meet the current group, and to catch up over dinner the way we used to after a long day of measurements.</p>
-      <p>Families and partners are warmly welcome at the dinner and on Sunday. We hope you can join us.</p>
-      <p class="sig"><a href="#committee">The reunion organizing committee</a></p>
+      <p>Over the past twenty years, members of the Jaramillo group have gone on to positions in academia, national laboratories, industry and startups around the world.</p>
+      <p>This symposium brings alumni and current members together to present their current research, in sessions organized by the period each speaker was in the lab. The program highlights how the group’s research has developed and opens a discussion of future directions in the field.</p>
+      <p>The day concludes with a reunion dinner. Partners and families are welcome at the dinner and at Sunday’s optional activities.</p>
+      <p class="sig"><a href="#committee">The organizing committee</a></p>
     </div>
   </div>
 </section>
@@ -323,12 +323,12 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
 <section class="classes" id="classes" aria-label="Twenty classes">
   <div class="stage">
     <div class="container">
-      <h2>Twenty classes, one lab</h2>
-      <p class="intro" style="margin-bottom:1.75rem">Your class is the year you joined the lab. Scroll through all twenty classes to see who’s coming, or select a year to jump to it. <span class="total" id="total"></span></p>
+      <h2>Attendees by class</h2>
+      <p class="intro" style="margin-bottom:1.75rem">Your class is the year you joined the lab. Scroll or select a year to see who from that class has registered. <span class="total" id="total"></span></p>
       <div class="yr-row">
         <div class="yr-big" id="yr-big"><small>Year</small><span id="yr-num">1</span></div>
         <div class="yr-info" aria-live="polite">
-          <h3 id="yr-era">Years 1–5: The beginning</h3>
+          <h3 id="yr-era">Years 1–5</h3>
           <div class="who" id="yr-who"></div>
           <span class="rep" id="yr-rep">Class representative: to be announced</span>
         </div>
@@ -347,32 +347,32 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
 <section class="section" id="program">
   <div class="container">
     <h2>Program</h2>
-    <p class="intro">The main program is on Saturday. Sunday activities are optional for those staying in town.</p>
+    <p class="intro">The symposium runs Saturday morning through afternoon, followed by the reunion dinner and evening reception. Sunday activities are optional.</p>
 
     <div class="day">
-      <h3 class="agenda-title">Saturday, July 31<span>Main program</span></h3>
+      <h3 class="agenda-title">Saturday, July 31<span>Symposium and reunion</span></h3>
       <table class="agenda">
         <thead><tr><th scope="col">Time</th><th scope="col">Agenda item</th></tr></thead>
         <tbody>
           <tr><td class="t">8:00 – 9:00 am</td><td><span class="item">Registration and coffee</span></td></tr>
           <tr><td class="t">9:00 – 9:15 am</td><td><span class="item">Welcome from Tom</span></td></tr>
-          <tr><td class="t">9:15 – 9:40 am</td><td><span class="item"><span class="era e1" aria-hidden="true"></span>Fireside chat: the first two students</span><span class="desc">A conversation about how the lab started. Years 1–5.</span></td></tr>
-          <tr><td class="t">9:40 – 10:00 am</td><td><span class="item">Alumni remarks</span><span class="desc">Including a “where are they now” map of alumni.</span></td></tr>
+          <tr><td class="t">9:15 – 9:40 am</td><td><span class="item"><span class="era e1" aria-hidden="true"></span>Conversation with the lab’s first two students</span><span class="desc">On the early years of the group. Years 1–5.</span></td></tr>
+          <tr><td class="t">9:40 – 10:00 am</td><td><span class="item">Alumni remarks</span><span class="desc">Including a map of where alumni are today.</span></td></tr>
           <tr class="brk"><td class="t">10:00 – 10:10 am</td><td><span class="item">Coffee break</span></td></tr>
-          <tr><td class="t">10:10 – 11:15 am</td><td><span class="item"><span class="era e2" aria-hidden="true"></span>Memory lane: Years 6–10</span><span class="desc">Session chair introduction, lightning talks and the “Guess the Year” photo game.</span></td></tr>
+          <tr><td class="t">10:10 – 11:15 am</td><td><span class="item"><span class="era e2" aria-hidden="true"></span>Session: Years 6–10</span><span class="desc">Introduction by the session chair, lightning talks and a photo game.</span></td></tr>
           <tr class="brk"><td class="t">11:15 – 11:25 am</td><td><span class="item">Coffee break</span></td></tr>
-          <tr><td class="t">11:25 am – 12:30 pm</td><td><span class="item"><span class="era e3" aria-hidden="true"></span>Memory lane: Years 11–15</span><span class="desc">Session chair introduction, lightning talks and an interactive game.</span></td></tr>
+          <tr><td class="t">11:25 am – 12:30 pm</td><td><span class="item"><span class="era e3" aria-hidden="true"></span>Session: Years 11–15</span><span class="desc">Introduction by the session chair and lightning talks.</span></td></tr>
           <tr><td class="t">12:30 – 1:30 pm</td><td><span class="item">Lunch</span></td></tr>
-          <tr><td class="t">1:30 – 2:35 pm</td><td><span class="item"><span class="era e4" aria-hidden="true"></span>The lab today: Years 16–20</span><span class="desc">Session chair introduction and lightning talks from current students and postdocs.</span></td></tr>
+          <tr><td class="t">1:30 – 2:35 pm</td><td><span class="item"><span class="era e4" aria-hidden="true"></span>Session: Years 16–20</span><span class="desc">Introduction by the session chair and lightning talks from current students and postdocs.</span></td></tr>
           <tr class="brk"><td class="t">2:35 – 2:45 pm</td><td><span class="item">Coffee break</span></td></tr>
           <tr><td class="t">2:45 – 2:55 pm</td><td><span class="item">Group photo</span></td></tr>
-          <tr><td class="t">2:55 – 3:15 pm</td><td><span class="item">Memory lane montage and letters from absent alumni</span></td></tr>
-          <tr><td class="t">3:15 – 3:30 pm</td><td><span class="item">A special moment</span></td></tr>
-          <tr><td class="t">3:30 – 4:30 pm</td><td><span class="item">Outdoor games</span><span class="desc">Cornhole and lawn games, come and go.</span></td></tr>
+          <tr><td class="t">2:55 – 3:15 pm</td><td><span class="item">Photo retrospective and messages from alumni</span></td></tr>
+          <tr><td class="t">3:15 – 3:30 pm</td><td><span class="item">Presentation</span></td></tr>
+          <tr><td class="t">3:30 – 4:30 pm</td><td><span class="item">Outdoor games</span><span class="desc">Cornhole and lawn games.</span></td></tr>
           <tr class="brk"><td class="t">4:30 – 4:45 pm</td><td><span class="item">Break</span></td></tr>
           <tr><td class="t">4:45 – 6:45 pm</td><td><span class="item">Dinner</span><span class="desc">Partners and families welcome.</span></td></tr>
-          <tr><td class="t">6:45 – 6:55 pm</td><td><span class="item">Thank you and afterparty announcement</span></td></tr>
-          <tr><td class="t">6:55 – 8:45 pm</td><td><span class="item">Afterparty on the patio</span><span class="desc">Optional, come and go.</span></td></tr>
+          <tr><td class="t">6:45 – 6:55 pm</td><td><span class="item">Closing remarks</span></td></tr>
+          <tr><td class="t">6:55 – 8:45 pm</td><td><span class="item">Evening reception on the patio</span><span class="desc">Optional, come and go.</span></td></tr>
         </tbody>
       </table>
       <div class="addl"><b>Additional information</b><p>Times follow the current draft agenda and may shift slightly. Rooms will be announced closer to the date.</p></div>
@@ -384,13 +384,13 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
         <thead><tr><th scope="col">Time</th><th scope="col">Agenda item</th></tr></thead>
         <tbody>
           <tr><td class="t">Morning</td><td><span class="item">Group hike</span><span class="desc">Chosen by vote on the registration form.</span></td></tr>
-          <tr><td class="t">Midday</td><td><span class="item">Brunch in Palo Alto</span><span class="desc">A relaxed meal before people head to the airport.</span></td></tr>
+          <tr><td class="t">Midday</td><td><span class="item">Brunch in Palo Alto</span><span class="desc">Informal brunch before departures.</span></td></tr>
         </tbody>
       </table>
         <div class="cards">
-          <div class="card"><h4>The Dish loop</h4><div class="meta">Easy, about 3.5 miles</div><p>Paved loop in the Stanford foothills, right next to campus. Good for all ages and strollers.</p></div>
-          <div class="card"><h4>Windy Hill</h4><div class="meta">Moderate, a short drive</div><p>Open ridgeline trails with wide views over the Bay on a clear morning.</p></div>
-          <div class="card"><h4>Half Moon Bay coast</h4><div class="meta">Easy, half day</div><p>Coastal bluff walk over the hills, with the option of lunch by the water.</p></div>
+          <div class="card"><h4>The Dish loop</h4><div class="meta">Easy, about 3.5 miles</div><p>Paved loop in the foothills next to campus. Suitable for all ages.</p></div>
+          <div class="card"><h4>Windy Hill</h4><div class="meta">Moderate, a short drive</div><p>Ridgeline trails with views of the Bay.</p></div>
+          <div class="card"><h4>Half Moon Bay coast</h4><div class="meta">Easy, half day</div><p>Coastal trail walk, with an option for lunch in town.</p></div>
         </div>
     </div>
   </div>
@@ -422,8 +422,8 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
 
 <section class="section" id="photos">
   <div class="container">
-    <h2>Send us your photos</h2>
-    <p class="intro">Old group photos and lab moments from any era will feed the “Guess the Year” game and the memory lane montage. Send yours to the organizers and tell us roughly what year each one is from.</p>
+    <h2>Photos</h2>
+    <p class="intro">We are collecting group photos from all years of the lab for a photo retrospective during the program. Please send photos to the organizers with the approximate year each was taken.</p>
     <div class="gallery">
       <div class="ph big e1" style="--c:var(--plum)">Years 1–5</div>
       <div class="ph" style="--c:var(--palo-alto)">Years 6–10</div>
@@ -439,7 +439,7 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
     <div>
       <h2>Register</h2>
       <div class="callout"><b>Please register by May 1, 2027</b><span>It takes about five minutes.</span></div>
-      <p style="color:var(--muted);margin:0 0 1.75rem">Registering helps us plan catering, the lightning talks, dinner and the Sunday activity.</p>
+      <p style="color:var(--muted);margin:0 0 1.75rem">Registration helps us plan catering, the talk schedule, dinner and Sunday activities.</p>
       <a class="btn red" id="regbtn" target="_blank" rel="noopener">Open the registration form</a>
       <p class="note" id="regnote"></p>
     </div>
@@ -450,9 +450,9 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
         <li><b>Your class:</b> the year you joined the lab, from Year 1 to Year 20</li>
         <li><b>Class representative:</b> whether you would like to represent your class</li>
         <li><b>Name on the website:</b> whether we can list your name under your class</li>
-        <li><b>Attendance:</b> Saturday program, dinner, afterparty and Sunday</li>
+        <li><b>Attendance:</b> Saturday symposium, dinner, evening reception and Sunday</li>
         <li><b>A lightning talk:</b> whether you would like to give one</li>
-        <li><b>Photos:</b> old lab photos for the game and montage</li>
+        <li><b>Photos:</b> lab photos for the retrospective</li>
         <li><b>Guests:</b> partners or family joining for dinner or Sunday</li>
         <li><b>Dietary needs</b> for lunch and dinner</li>
         <li><b>Sunday vote:</b> the Dish, Windy Hill or the coast</li>
@@ -465,11 +465,12 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
   <div class="container">
     <h2>Frequently asked questions</h2>
     <div class="faq">
+      <details><summary>Is this a symposium or a reunion?</summary><p>Both. The daytime program is a scientific symposium with research talks from alumni and current members. The evening is a reunion dinner and reception.</p></details>
       <details><summary>Who is invited?</summary><p>Everyone who has been part of the Jaramillo group: former and current graduate students, postdocs, visiting researchers, undergraduates and staff, along with close collaborators.</p></details>
-      <details><summary>What is a class representative?</summary><p>Your class is the year you joined the lab, from Year 1 to Year 20. For example, if you joined in the lab’s third year, you are in the Year 3 class. A class representative helps reach out to their classmates and makes sure their year is part of the day. You can volunteer on the registration form.</p></details>
+      <details><summary>What is a class representative?</summary><p>Your class is the year you joined the lab, from Year 1 to Year 20. For example, if you joined in the lab’s third year, you are in the Year 3 class. A class representative helps contact members of their class and coordinate their participation. You can volunteer on the registration form.</p></details>
       <details><summary>Can I bring my family?</summary><p>Yes. Partners and families are welcome at dinner and on Sunday. Please include them in your registration so we can plan numbers.</p></details>
-      <details><summary>Do I have to give a talk?</summary><p>Not at all. Lightning talks are about eight minutes, grouped by era, and we encourage speakers to open with a favorite lab memory before the science. We would love to hear from people in every kind of role, not just research.</p></details>
-      <details><summary>I can’t make it. Can I still take part?</summary><p>Yes. Send the organizers a short note or video and it will be shown during the memory lane montage with letters from absent alumni.</p></details>
+      <details><summary>Do I have to give a talk?</summary><p>No. Lightning talks are about eight minutes and grouped by era. Speakers from all career paths are welcome, both in and outside of research.</p></details>
+      <details><summary>I can’t make it. Can I still take part?</summary><p>Yes. Short written or video messages from alumni who cannot attend will be shown during the program. Please send them to the organizers.</p></details>
       <details><summary>Is there a registration fee?</summary><p>To be confirmed. We will post details here once the budget for catering and dinner is set.</p></details>
       <details><summary>I need a letter for travel or a visa.</summary><p>Email the organizers and we will send a signed invitation letter.</p></details>
     </div>
@@ -479,7 +480,7 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
 <section class="section alt" id="committee">
   <div class="container">
     <h2>The organizing committee</h2>
-    <p class="intro">Questions, ideas or old photos to share? Reach out to any of us.</p>
+    <p class="intro">Contact any member of the committee with questions.</p>
     <ul class="committee" id="committee-list"></ul>
   </div>
 </section>
@@ -490,7 +491,7 @@ details p{color:var(--muted);margin:0 0 1.2rem;max-width:68ch}
   <div class="local-footer">
     <div class="container">
       <div>
-        <a class="lockup" href="#top"><span class="l1">Jaramillo Lab</span><span class="bar" aria-hidden="true"></span><span class="l2">20-Year Reunion</span></a>
+        <a class="lockup" href="#top"><span class="l1">Jaramillo Lab</span><span class="bar" aria-hidden="true"></span><span class="l2">Symposium &amp; Reunion 2027</span></a>
         <p>Department of Chemical Engineering · Stanford, California</p>
       </div>
       <div>
@@ -535,7 +536,7 @@ const CONFIG = {
     reg.textContent = "Registration opens soon"; reg.setAttribute("aria-disabled","true");
     note.textContent = "The form link will appear here once it is ready.";
   }
-  document.getElementById("mail").href = "mailto:" + CONFIG.organizerEmail + "?subject=" + encodeURIComponent("Jaramillo Lab 20-Year Reunion");
+  document.getElementById("mail").href = "mailto:" + CONFIG.organizerEmail + "?subject=" + encodeURIComponent("Jaramillo Lab Symposium and Reunion 2027");
 
   // committee
   const list = document.getElementById("committee-list");
@@ -555,10 +556,10 @@ const CONFIG = {
   const fmt = d => new Date(d).toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
   const cal = new URL("https://calendar.google.com/calendar/render");
   cal.searchParams.set("action","TEMPLATE");
-  cal.searchParams.set("text","20 Years of the Jaramillo Lab: Reunion");
+  cal.searchParams.set("text","20 Years of Science in the Jaramillo Lab: Symposium and Reunion");
   cal.searchParams.set("dates", fmt(CONFIG.start) + "/" + fmt(CONFIG.end));
   cal.searchParams.set("location","Stanford, CA");
-  cal.searchParams.set("details","One-day reunion for the Jaramillo Lab. Optional hike and brunch on Sunday, August 1.");
+  cal.searchParams.set("details","One-day scientific symposium and alumni reunion for the Jaramillo Lab. Optional hike and brunch on Sunday, August 1.");
   document.getElementById("cal").href = cal.toString();
 
   // countdown
@@ -574,10 +575,10 @@ const CONFIG = {
 
   // twenty classes
   const ERAS = [
-    {c:"var(--plum)",      name:"Years 1–5: The beginning"},
-    {c:"var(--palo-alto)", name:"Years 6–10: Memory lane"},
-    {c:"var(--lagunita)",  name:"Years 11–15: Memory lane"},
-    {c:"var(--rose)",  name:"Years 16–20: The lab today"}
+    {c:"var(--plum)",      name:"Years 1–5"},
+    {c:"var(--palo-alto)", name:"Years 6–10"},
+    {c:"var(--lagunita)",  name:"Years 11–15"},
+    {c:"var(--rose)",  name:"Years 16–20"}
   ];
   const scene = document.getElementById("classes"), ticks = document.getElementById("ticks");
   const big = document.getElementById("yr-big"), num = document.getElementById("yr-num");
